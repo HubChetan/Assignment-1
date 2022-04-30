@@ -1,0 +1,404 @@
+                  Assignment-1
+
+Question- Swap two numbers using temporary variable
+  
+public class SwappingDemo {
+
+    public static void main(String[] args) {
+
+        float first = 9.6f, second = 9.9f;
+
+        System.out.println("--Before swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
+        
+        float temporary = first;
+        first = second;
+        second = temporary;
+        System.out.println("--After swap--");
+        System.out.println("First number = " + first);
+        System.out.println("Second number = " + second);
+    }
+}
+
+Output- 
+--Before swap--
+First number = 9.6
+Second number = 9.9
+--After swap--
+First number = 9.9
+Second number = 9.6
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Swap two numbers without using temporary variable
+
+public class SwapDemo2 {
+
+    public static void main(String[] args) {
+
+        float first = 56.3f, second = 65.4f;
+
+     System.out.println("--Before swap--");
+     System.out.println("First number = " + first);
+     System.out.println("Second number = " + second);
+
+      first = first - second;
+      second = first + second;
+      first = second - first;
+
+     System.out.println("--After swap--");
+     System.out.println("First number = " + first);
+     System.out.println("Second number = " + second);
+    }
+}
+
+Output-
+--Before swap--
+First number = 56.3
+Second number = 65.4
+--After swap--
+First number = 65.4
+Second number = 56.3
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Check whether a number is even or odd using ternary operator
+
+import java.util.Scanner;
+
+public class TurnaryDemo {
+
+    public static void main(String[] args) {
+
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = reader.nextInt();
+
+        String evenOdd = (num % 2 == 0) ? "even" : "odd";
+
+        System.out.println(num + " is " + evenOdd);
+
+    }
+}
+
+Output-
+Enter a number: 
+44
+44 is even
+Enter a number: 
+27
+27 is odd
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Check whether an alphabet is vowel or consonant using if..else statement
+
+import java.util.Scanner;
+
+public class Demo4
+{
+   public static void main(String[] args)
+   {
+      char ch;
+      Scanner scan = new Scanner(System.in);
+      
+      System.out.print("Enter an Alphabet: ");
+      ch = scan.next().charAt(0);
+      
+      if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' ||
+         ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
+         System.out.println("\nIt is a Vowel.");
+      else
+         System.out.println("\nIt is a Consonant.");
+   }
+}
+
+Output-
+Enter an Alphabet: 
+A
+
+It is a Vowel.
+
+Enter an Alphabet: 
+B
+
+It is a Consonant.
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Check whether an alphabet is vowel or consonant using switch statement
+
+import java.util.Scanner;
+class Demo5
+{
+   public static void main(String[ ] arg)
+   {
+	boolean isVowel=false;;
+	Scanner scanner=new Scanner(System.in);
+	System.out.println("Enter a character : ");
+	char ch=scanner.next().charAt(0); 
+	scanner.close();
+	switch(ch)
+	{
+	   case 'a' :
+	   case 'e' :
+    	   case 'i' :
+	   case 'o' :
+	   case 'u' :
+	   case 'A' :
+	   case 'E' :
+	   case 'I' :
+	   case 'O' :
+	   case 'U' : isVowel = true;
+	}
+	if(isVowel == true) {
+	   System.out.println(ch+" is  a Vowel");
+	}
+	else {
+	   if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z'))
+		System.out.println(ch+" is a Consonant");
+	   else
+		System.out.println("Input is not an alphabet");		
+        }
+   }
+}
+
+Output-
+Enter a character : 
+i
+i is  a Vowel
+
+Enter a character : 
+G
+G is a Consonant
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Find Largest Among three numbers using if..else statement
+
+public class Demo6 {
+
+ public static void main(String[] args) {
+ double n1 = -4.5, n2 = 3.9, n3 = 10.54;
+
+ if( n1 >= n2 && n1 >= n3)
+  System.out.println(n1 + " is the largest number.");
+
+   else if (n2 >= n1 && n2 >= n3)
+   System.out.println(n2 + " is the largest number.");
+    else
+   System.out.println(n3 + " is the largest number.");
+    }
+}
+
+Output-
+10.54 is the largest number.
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Find the largest number among three using nested if..else statement
+
+public class Demo7{
+
+ public static void main(String[] args) {
+double n1 = -4.5, n2 = 3.9, n3 = 9.6;
+
+ if(n1 >= n2) {
+ if(n1 >= n3)
+  System.out.println(n1 + " is the largest number.");
+   else
+   System.out.println(n3 + " is the largest number.");
+   } else {
+     if(n2 >= n3)
+   System.out.println(n2 + " is the largest number.");
+     else
+    System.out.println(n3 + " is the largest number.");
+        }
+    }
+}
+
+Output-
+9.6 is the largest number.
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Java Program to Find Roots of a Quadratic Equation
+
+import java.util.Scanner;
+public class Demo9
+{
+
+     public static void main(String []args)
+     {
+        Scanner sc=new Scanner(System.in);
+        double a,b,c;      
+        System.out.println("Enter the value of a..");
+        a=sc.nextDouble();  
+        System.out.println("Enter the value of b..");
+        b=sc.nextDouble();    
+        System.out.println("Enter the value of c..");
+        c=sc.nextDouble();   
+        
+        double d=(b*b)-(4*a*c);    
+        double D= Math.sqrt(d);
+        double r=2*a;
+       
+        if(D>0)
+        {
+            System.out.println("Roots are real and unequal");
+            double root1=(D-b)/r;
+            double root2=(-D-b)/r;
+            System.out.println("Roots are..");
+            System.out.println(root1);
+            System.out.println(root2);
+        }
+        else if(D==0)
+        {
+            System.out.println("The roots of the quadratic equation are real and equal.");
+            double root=(-b)/r;
+            System.out.println("Root is "+root);
+        }
+        else
+        {
+            System.out.println("The roots of the quadratic equation are complex and different");
+            System.out.println("Roots are ");
+            System.out.println((-b/r)+" +i" + D);
+            System.out.println((-b/r)+" -i" + D);
+        }
+     }
+}
+
+Output-
+Enter the value of a..
+7
+Enter the value of b..
+8
+Enter the value of c..
+6
+The roots of the quadratic equation are complex and different
+Roots are 
+-0.5714285714285714 +iNaN
+-0.5714285714285714 -iNaN
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Check if a Number is Positive or Negative using if else
+
+import java.util.Scanner;
+public class Demo9
+{
+    public static void main(String[] args) 
+    {
+        int number;
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number you want to check:");
+        number = scan.nextInt();
+        scan.close();
+        if(number > 0)
+        {
+            System.out.println(number+" is positive number");
+        }
+        else if(number < 0)
+        {
+            System.out.println(number+" is negative number");
+        }
+        else
+        {
+            System.out.println(number+" is neither positive nor negative");
+        }
+    }
+}
+
+Output-
+Enter the number you want to check:
+4
+4 is positive number
+
+Enter the number you want to check:
+-9
+-9 is negative number
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Java Program to Check Alphabet using if else
+
+import java.util.Scanner;
+
+public class Demo10
+{
+     public static void main(String []args)
+     {
+ Scanner sc=new Scanner(System.in);
+ char ch;     //Declare a character
+  System.out.println("Enter the character ");
+  ch=sc.next().charAt(0);   //Initialize the character
+  if((ch>='A' && ch<='Z')||(ch>='a' && ch<='z'))
+{
+   System.out.print(ch+" is an Alphabet ");
+}
+   else
+ {
+   System.out.print(ch+" is not an Alphabet ");
+  }
+ }   
+}
+
+Output-
+Enter the character 
+F
+F is an Alphabet 
+
+Enter the character 
+5
+5 is not an Alphabet 
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+
+
+
+        
+
+
