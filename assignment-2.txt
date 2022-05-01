@@ -1,0 +1,440 @@
+                  Assignment-2
+
+Question- Java Program to Check Alphabet using ternary operator
+
+import java.util.Scanner;
+
+public class Demo11
+{
+     public static void main(String []args)
+     {
+        Scanner sc=new Scanner(System.in);
+        char ch;    
+        System.out.println("Enter the character ");
+        ch=sc.next().charAt(0);   
+        
+            String res = (ch>= 'a' && ch<= 'z') || (ch>= 'A' && ch<= 'Z')
+                ? ch+ " is an alphabet."
+                : ch+ " is not an alphabet.";
+        
+        System.out.println(res);
+     }
+ 
+}
+
+Output- 
+Enter the character 
+T
+T is an alphabet.
+
+Enter the character 
+2
+2 is not an alphabet.
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Java Program to Check Alphabet using isAlphabetic() Method
+
+import java.util.Scanner;
+
+public class Demo12
+{
+     public static void main(String []args)
+     {
+        Scanner sc=new Scanner(System.in);
+        char ch;     
+        System.out.println("Enter the character ");
+        ch=sc.next().charAt(0);   
+        
+        if (Character.isAlphabetic(ch)) 
+        {
+             System.out.println(ch + " is an alphabet.");
+        }
+        else 
+       {
+             System.out.println(ch + " is not an alphabet.");
+       }
+       
+     }  
+}
+
+Output-
+Enter the character 
+S
+S is an alphabet.
+
+Enter the character 
+7
+7 is not an alphabet.
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Sum of Natural Numbers using for loop
+
+import java.util.Scanner;
+
+public class Demo13{
+private static Scanner sc;
+public static void main(String[] args) 
+	{
+		int number, i, sum = 0;
+		sc = new Scanner(System.in);
+		
+    System.out.print(" Please Enter any Number : ");
+    number = sc.nextInt();	
+		
+		for(i = 1; i <= number; i++)
+		{
+			sum = sum + i; 
+		}	
+		
+    System.out.println("\n The Sum of Natural Numbers from 1 to "+ number + " = " + sum);
+	}
+}
+
+Output-
+ Please Enter any Number : 
+5
+
+ The Sum of Natural Numbers from 1 to 5 = 15
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Sum of Natural Numbers using while loop
+
+import java.util.Scanner;
+public class Demo14 {
+	private static Scanner sc;
+	public static void main(String[] args) 
+	{
+	int number, sum = 0;
+	sc = new Scanner(System.in);
+		
+	System.out.print(" Please Enter any Number : ");
+	number = sc.nextInt();	
+		
+	sum = SNat(number);
+	System.out.println("\n The Sum of Natural Numbers from 1 to "+ number + " = " + sum);
+	}
+	
+	public static int SNat(int num)
+	{		
+	if(num == 0)
+		{
+		return num;
+		}
+		else
+		{
+		return (num * (num + 1)/2);
+		}
+	}
+}
+
+Output-
+ Please Enter any Number : 
+100
+
+ The Sum of Natural Numbers from 1 to 100 = 5050
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Find Factorial of a number using for loop
+
+import java.util.Scanner;
+ 
+public class Demo15 {
+    public static void main(String args[]) {
+        int num, factorial = 1, i;
+ 
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter an Integer");
+        num = in.nextInt();
+         
+        for (i = 1; i <= num; i++){
+            factorial = factorial * i;
+        }
+         
+        System.out.println("!" + num + " = " + factorial);
+    }
+}
+
+Output-
+Enter an Integer
+6
+!6 = 720
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Find Factorial of a number using BigInteger
+
+import java.math.BigInteger;
+import java.util.Scanner;
+public class Demo16 {
+
+  public static BigInteger findFactorial(int number){
+    BigInteger fact = BigInteger.ONE;
+
+     for(int i=1; i<=number; i++) {
+       fact = fact.multiply(BigInteger.valueOf(i));
+     }
+     return fact;
+  }
+ public static void main(String[] args) {
+     int number = 0;
+     Scanner scan = new Scanner(System.in);
+     System.out.print("Enter integer number:");
+     number = scan.nextInt();
+
+     System.out.println("Factorial = "+ 
+		        findFactorial(number));
+     scan.close();
+  }
+}
+
+Output-
+Enter integer number:
+15
+Factorial = 1307674368000
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Find Factorial of a number using while loop
+
+import java.util.Scanner;
+public class Demo17{
+
+  public static long findFactorial(int number) {
+     long fact = 1;
+     int i = 1;
+while(i<=number) {
+          fact = fact * i;
+          i++;
+     }
+     return fact;
+  }
+
+  public static void main(String[] args) {
+     int number = 0;
+     long result = 0;
+     Scanner scan = new Scanner(System.in);
+     System.out.print("Enter integer number:");
+     number = scan.nextInt();
+     result = findFactorial(number);
+     System.out.println("Factorial = "+ result);
+     scan.close();
+   }
+}
+
+Output- 
+Enter integer number:
+16
+Factorial = 20922789888000
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Generate Multiplication Table using for loop
+
+import java.util.Scanner;
+public class Demo18{
+public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+int num=0;
+     System.out.println("Enter the number: ");
+     num=sc.nextInt();
+for(int i=1; i<=10; i++){
+    System.out.println(num+"*"+i+"="+num*i);
+
+            }
+        }
+
+    }
+
+Output-
+Enter the number: 
+4
+4*1=4
+4*2=8
+4*3=12
+4*4=16
+4*5=20
+4*6=24
+4*7=28
+4*8=32
+4*9=36
+4*10=40
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Generate Multiplication Table using while loop
+
+import java.util.Scanner;
+public class Demo19{
+public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+int num;
+     System.out.println("Enter the number: ");
+     num=sc.nextInt();
+     int i=1;
+while( i<=10;){
+      System.out.println(num+"x"+i+"="+num*i);
+ i++;
+
+            }
+        }
+
+    }
+
+Output-
+Enter the number: 
+8
+8*1=8
+8*2=16
+8*3=24
+8*4=32
+8*5=40
+8*6=48
+8*7=56
+8*8=64
+8*9=72
+8*10=80
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Display Fibonacci Series Using for Loop
+
+import java.util.Scanner;
+public class Demo20
+{
+    public static void main(String[] args) 
+    {
+       Scanner sc=new Scanner(System.in);
+        int t1 = 0, t2 = 1;
+        System.out.print("Enter the number of terms: ");
+        int n=sc.nextInt();   
+        System.out.println("First " + n + " terms of fibonnaci series: ");
+        for (int i = 1; i <= n; ++i)
+        {
+            System.out.print(t1 + " ");
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+    }
+}
+
+Output-
+Enter the number of terms: 
+7
+First 7 terms of fibonnaci series: 
+0 1 1 2 3 5 8 
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Display Fibonacci series using while loop
+
+import java.util.Scanner;
+public class Demo21
+{
+    public static void main(String[] args) 
+    {
+       Scanner sc=new Scanner(System.in);
+        int t1 = 0, t2 = 1;
+        System.out.print("Enter the number of terms: ");
+        int n=sc.nextInt();  
+        System.out.println("First " + n + " terms of fibonnaci series: ");
+        int i = 1; 
+        while (i <= n)
+        {
+            System.out.print(t1 + " ");
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+            i++;
+        }
+    }
+}
+
+Output-
+Enter the number of terms: 
+9
+First 9 terms of fibonnaci series: 
+0 1 1 2 3 5 8 13 21 
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Display Fibonacci series up to a given number
+
+import java.util.Scanner;
+public class Demo22
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        int t1 = 0, t2 = 1;
+        System.out.print("Enter the number: ");
+        int n=sc.nextInt();  
+        System.out.println("Fibonnaci series upto "+n+": ");
+         while (t1 <= n)
+        {
+            System.out.print(t1 + " ");
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+    }
+}
+
+Output- 
+Enter the number: 
+12
+Fibonnaci series upto 12: 
+0 1 1 2 3 5 8 
+
+** Process exited - Return Code: 0 **
+
+
+
+
+
+
