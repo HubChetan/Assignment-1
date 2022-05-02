@@ -1,0 +1,324 @@
+                        Assignment-3
+
+Question- Find GCD of two numbers using for loop and if statement
+
+import java.util.Scanner;
+ public class Demo23 
+{
+  public static void main(String[] args) 
+  {
+    int n1 = 81, n2 = 153;
+    int gcd = 1;
+
+    for (int i = 1; i <= n1 && i <= n2; ++i) 
+    {
+      if (n1 % i == 0 && n2 % i == 0)
+        gcd = i;
+    }
+     System.out.println("GCD of " + n1 +" and " + n2 + " is " + gcd);
+  }
+}
+
+Output- 
+GCD of 81 and 153 is 9
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Find GCD of two numbers using while loop and if else statement
+
+import java.util.Scanner;
+public class Demo24 
+{
+  public static void main(String[] args) {
+    int n1 = 81, n2 = 153;
+    while(n1 != n2) {
+    
+      if(n1 > n2) {
+        n1 -= n2;
+      }
+      
+      else {
+        n2 -= n1;
+      }
+    }
+
+    System.out.println("GCD: " + n1);
+  }
+}
+
+output-
+GCD: 9
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- GCD for both positive and negative numbers both positive and negative
+
+import java.util.Scanner;
+public class Demo25 {
+  public static void main(String[] args) {
+
+    int n1 = 81, n2 = -153;
+
+    // Always set to positive
+    n1 = ( n1 > 0) ? n1 : -n1;
+    n2 = ( n2 > 0) ? n2 : -n2;
+
+    while(n1 != n2) {
+        
+      if(n1 > n2) {
+        n1 -= n2;
+      }
+      
+      else {
+        n2 -= n1;
+      }
+    }
+    
+    System.out.println("GCD: " + n1);
+  }
+}
+
+Output- 
+GCD: 9
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- LCM using while Loop and if Statement
+
+import java.util.Scanner;  
+public class Demo26
+{  
+    public static void main(String[] args)    
+    {
+        Scanner sc = new Scanner(System.in); 
+        System.out.println("Enter the first number: ");  
+        int num1 = sc.nextInt();  
+        System.out.println("Enter the second number: ");  
+        int num2 = sc.nextInt();  
+        int lcm = (num1 > num2) ? num1 : num2;
+        while(true) 
+        {
+           if( lcm % num1 == 0 && lcm % num2 == 0 ) 
+           {
+               System.out.printf("The LCM of "+num1+" and "+num2+" is "+lcm);
+               break;
+            }
+         ++lcm;
+        }
+   }  
+}  
+
+Output- 
+Enter the first number: 
+32
+Enter the second number: 
+89
+The LCM of 32 and 89 is 2848
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Calculate LCM using GCD
+
+import java.util.Scanner;
+public class Demo27
+{  
+public static void main(String[] args)   
+{  
+ Scanner sc=new Scanner(System.in);
+ System.out.println("Enter first number");
+int n1 = sc.nextInt();
+ System.out.println("Enter Second number");
+int n2 = sc.nextInt();
+int gcd=1;
+
+    for(int i = 1; i <= n1 && i <= n2; ++i) {
+      
+      if(n1 % i == 0 && n2 % i == 0)
+        gcd = i;
+    }
+
+    int lcm = (n1 * n2) / gcd;
+    System.out.printf("The LCM of %d and %d is %d.", n1, n2, lcm);
+  }
+}
+
+
+Output- 
+Enter first number
+4
+Enter Second number
+5
+The LCM of 4 and 5 is 20.
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Display uppercase alphabet using for loop
+
+import java.util.Scanner;
+public class Demo28 {
+	public static void main(String[] args) {
+		char character;
+	System.out.print(" All UpperCase Alphabets are \n");
+		for (character = 'A'; character <= 'Z'; ++character)
+	System.out.print(character + " ");
+	}
+}
+
+Output-
+ All UpperCase Alphabets are 
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Display lowercase alphabet using for loop
+
+import java.util.Scanner;
+public class Demo29 {
+	public static void main(String[] args) {
+		char character;
+	System.out.print(" All lowerCase Alphabets are\n");
+		for (character = 'a'; character <= 'z'; ++character)
+	System.out.print(character + " ");
+	}
+}
+
+Output- 
+ All lowerCase Alphabets are
+a b c d e f g h i j k l m n o p q r s t u v w x y z 
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Count Number of Digits in an Integer using while loop
+
+import java.util.Scanner;
+public class Demo30{
+	private static Scanner sc;
+	
+	public static void main(String[] args) {
+		int Number, Count=0;
+		sc = new Scanner(System.in);		
+        System.out.println("\n Please Enter any Number: ");
+		Number = sc.nextInt();
+		
+		while(Number > 0) {
+			Number = Number / 10;
+			Count = Count + 1; 
+		}
+	System.out.format("\n Number of Digits in a Given Number = %d", Count);
+	}
+}
+
+Output- 
+
+ Please Enter any Number: 
+445666
+
+ Number of Digits in a Given Number = 6
+
+ Please Enter any Number: 
+000544
+
+ Number of Digits in a Given Number = 3
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Reverse a Number using a while loop in Java
+
+import java.util.Scanner;
+class Demo31
+{
+   public static void main(String args[])
+   {
+      int num=0;
+      int reversenum =0;
+   System.out.println("Enter a number: ");
+      Scanner in = new Scanner(System.in);
+      num = in.nextInt();
+      while( num != 0 )
+      {
+          reversenum = reversenum * 10;
+          reversenum = reversenum + num%10;
+          num = num/10;
+      }
+
+  System.out.println("Reverse number is: "+reversenum);
+   }
+} 
+
+Output- 
+Enter a number: 
+195
+Reverse number is: 591
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Reverse a number using a for loop in Java
+
+import java.util.Scanner;
+public class Demo32
+{
+   public static void main(String args[])
+   {
+      int num=0;
+      int reversenum =0;
+  System.out.println("Enter a number : ");
+      Scanner in = new Scanner(System.in);
+      num = in.nextInt();
+      for( ;num != 0; )
+      {
+          reversenum = reversenum * 10;
+          reversenum = reversenum + num%10;
+          num = num/10;
+      }
+
+  System.out.println("Reverse number is: "+reversenum);
+   }
+}
+
+Output- 
+Enter a number : 
+7412
+Reverse number is: 2147
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+
+
+
+
