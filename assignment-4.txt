@@ -1,0 +1,244 @@
+                         Assignment-4
+
+Question- Calculate power of a number using a while loop
+
+import java.util.Scanner;  
+public class Main  
+{  
+public static void main(String args[])   
+{  
+   int base, exponent, expo;  
+   Scanner sc=new Scanner(System.in);  
+System.out.print("Enter the base: ");  
+    base=sc.nextInt();  
+System.out.print("Enter the exponent: ");  
+    exponent=sc.nextInt();  
+    expo=exponent;  
+    long power = 1;  
+
+   while (exponent != 0)   
+{  
+    power = power * base;  
+   --exponent;  
+}  
+
+System.out.println(base +" to the power " +expo + " is: "+power);  
+}  
+}  
+
+Output- 
+Enter the base: 
+4
+Enter the exponent: 
+2
+4 to the power 2 is: 16
+
+
+** Process exited - Return Code: 0 **
+
+
+
+Question- Calculate the power of a number using a for loop
+
+import java.util.Scanner;  
+public class Main
+{  
+   static int power(int base, int exponent)  
+{  
+    int power = 1;  
+
+for (int i = 1; i <= exponent; i++)   
+    power = power * base;   
+    return power;  
+}  
+public static void main(String args[])  
+{  
+      int base, exponent;  
+      Scanner sc=new Scanner(System.in);  
+System.out.print("Enter the base: ");  
+       base=sc.nextInt();  
+System.out.print("Enter the exponent: ");  
+       exponent=sc.nextInt();  
+      int pow=power(base, exponent);  
+System.out.println(base +" to the power " +exponent + " is: "+pow);  
+}  
+}  
+
+Output- Enter the base: 
+2
+Enter the exponent: 
+3
+2 to the power 3 is: 8
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Calculate the power of a number using pow() function
+
+import java.util.Scanner ;
+class Main {
+  public static void main(String[] args) {
+
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter base");
+    int base = sc.nextInt(); 
+    System.out.println("Enter exponent");
+   int  exponent = sc.nextInt(); ;
+
+   double result = Math.pow(base, exponent);
+
+    System.out.println("Answer = " + result);
+  }
+}
+
+
+Output-
+
+Enter base
+2
+Enter exponent
+3
+Answer = 8.0
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Java Program to Check Palindrome String
+
+
+import java.util.Scanner ;
+class Main {
+  public static void main(String[] args) {
+
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter string");
+      String str = sc.nextLine(); 
+     String reverseStr = "";
+    
+    int strLength = str.length();
+
+    for (int i = (strLength - 1); i >=0; --i) {
+      reverseStr = reverseStr + str.charAt(i);
+    }
+
+    if (str.toLowerCase().equals(reverseStr.toLowerCase())) {
+      System.out.println(str + " is a Palindrome String.");
+    }
+    else {
+      System.out.println(str + " is not a Palindrome String.");
+    }
+  }
+}
+
+Output-
+Enter string
+ABCBA
+ABCBA is a Palindrome String.
+
+Enter string
+Moon
+Moon is not a Palindrome String.
+
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Java Program to Check Palindrome Number
+
+
+import java.util.Scanner ;
+class Main {
+  public static void main(String[] args) {
+
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Ente number");
+      int num = sc.nextInt();
+      int reversedNum = 0, remainder;
+    
+    
+    int originalNum = num;
+    
+   
+    while (num != 0) {
+      remainder = num % 10;
+      reversedNum = reversedNum * 10 + remainder;
+      num /= 10;
+    }
+    
+    
+    if (originalNum == reversedNum) {
+      System.out.println(originalNum + " is Palindrome.");
+    }
+    else {
+      System.out.println(originalNum + " is not Palindrome.");
+    }
+  }
+}
+
+
+Output- 
+Enter number
+1234
+1234 is not Palindrome.
+
+
+** Process exited - Return Code: 0 **
+
+
+
+
+Question- Display Prime Numbers Between Two Intervals
+
+
+
+import java.util.Scanner ;
+class Main {
+  public static void main(String[] args) {
+	    int num,t,s,rem;
+             	    Scanner sc=new Scanner(System.in);
+	    System.out.println("Enter any number1 ");
+                 int  low=sc.nextInt();
+        System.out.println("Enter any number2 ");
+                 int  high=sc.nextInt();
+                 
+                 
+	     while (low < high) {
+            boolean flag = false;
+
+            for(int i = 2; i <= low/2; ++i) {
+             
+                if(low % i == 0) {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (!flag && low != 0 && low != 1)
+                System.out.print(low + " ");
+
+            ++low;
+        }
+    }
+}
+
+Output-
+Enter any number1 
+1
+Enter any number2 
+14
+2 3 5 7 11 13 
+
+** Process exited - Return Code: 0 **
+
+
+
+
